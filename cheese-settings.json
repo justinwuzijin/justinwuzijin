@@ -5,7 +5,7 @@
   "foregroundColor": "#24292f",
   "strongColor": "#24292f",
   "weakColor": "#8c959f",
-  "radarColor": "#FFA726",
+  "radarColor": "#C84C09",
   "growingAnimation": true,
   "contribPatterns": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "top": {
-        "backgroundColor": "#B8A850",
-        "foregroundColor": "#FFE98A",
+        "backgroundColor": "#A06818",
+        "foregroundColor": "#F5BE6E",
         "width": 32,
         "bitmap": [
           "0x00000000", "0x00000000", "0x00000000", "0x00000000",
@@ -96,8 +96,8 @@
     },
     {
       "top": {
-        "backgroundColor": "#A08020",
-        "foregroundColor": "#FFC847",
+        "backgroundColor": "#8E5510",
+        "foregroundColor": "#F5A623",
         "width": 32,
         "bitmap": [
           "0x00000000", "0x00000000", "0x00000000", "0x00000000",
@@ -139,8 +139,8 @@
     },
     {
       "top": {
-        "backgroundColor": "#8B5A0A",
-        "foregroundColor": "#FF9F1C",
+        "backgroundColor": "#7A4508",
+        "foregroundColor": "#E88A0E",
         "width": 32,
         "bitmap": [
           "0x00000000", "0x00000000", "0x00000000", "0x00000000",
@@ -182,8 +182,8 @@
     },
     {
       "top": {
-        "backgroundColor": "#6B3A00",
-        "foregroundColor": "#E87D0D",
+        "backgroundColor": "#6B3500",
+        "foregroundColor": "#C84C09",
         "width": 32,
         "bitmap": [
           "0x00000000", "0x00000000", "0x00000000", "0x00000000",
@@ -230,7 +230,7 @@
     "foregroundColor": "#e6edf3",
     "strongColor": "#e6edf3",
     "weakColor": "#8b949e",
-    "radarColor": "#FFA726",
+    "radarColor": "#C84C09",
     "growingAnimation": true,
     "contribPatterns": [
       {
@@ -278,8 +278,8 @@
       },
       {
         "top": {
-          "backgroundColor": "#6B5A10",
-          "foregroundColor": "#FFE98A",
+          "backgroundColor": "#5A3810",
+          "foregroundColor": "#F5BE6E",
           "width": 32,
           "bitmap": [
             "0x00000000", "0x00000000", "0x00000000", "0x00000000",
@@ -321,8 +321,8 @@
       },
       {
         "top": {
-          "backgroundColor": "#6B4D10",
-          "foregroundColor": "#FFC847",
+          "backgroundColor": "#4D3008",
+          "foregroundColor": "#F5A623",
           "width": 32,
           "bitmap": [
             "0x00000000", "0x00000000", "0x00000000", "0x00000000",
@@ -364,8 +364,8 @@
       },
       {
         "top": {
-          "backgroundColor": "#5A3A05",
-          "foregroundColor": "#FF9F1C",
+          "backgroundColor": "#402505",
+          "foregroundColor": "#E88A0E",
           "width": 32,
           "bitmap": [
             "0x00000000", "0x00000000", "0x00000000", "0x00000000",
@@ -407,8 +407,8 @@
       },
       {
         "top": {
-          "backgroundColor": "#3A2000",
-          "foregroundColor": "#E87D0D",
+          "backgroundColor": "#301A00",
+          "foregroundColor": "#C84C09",
           "width": 32,
           "bitmap": [
             "0x00000000", "0x00000000", "0x00000000", "0x00000000",
