@@ -5,241 +5,161 @@
   "foregroundColor": "#24292f",
   "strongColor": "#24292f",
   "weakColor": "#8c959f",
-  "radarColor": "#C84C09",
+  "radarColor": "#FFA726",
   "growingAnimation": true,
   "contribPatterns": [
     {
       "top": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#ebedf0",
-        "width": 32,
-        "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
-        ]
-      },
-      "left": {
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#ebedf0",
         "foregroundColor": "#d0d3d6",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+          "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+          "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+          "0x08000000", "0x18000000", "0x08000000", "0x00000000"
+        ]
+      },
+      "left": {
+        "width": 32,
+        "bitmap": [
+          "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+          "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+          "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+          "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       },
       "right": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#c8cacd",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+          "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+          "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+          "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       }
     },
     {
       "top": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#F5BE6E",
+        "backgroundColor": "#FFE98A",
+        "foregroundColor": "#D4B84A",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+          "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+          "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+          "0x08000000", "0x18000000", "0x08000000", "0x00000000"
         ]
       },
       "left": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#D9A050",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+          "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+          "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+          "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       },
       "right": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#C89040",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+          "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+          "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+          "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       }
     },
     {
       "top": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#F5A623",
+        "backgroundColor": "#FFC847",
+        "foregroundColor": "#C4922A",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+          "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+          "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+          "0x08000000", "0x18000000", "0x08000000", "0x00000000"
         ]
       },
       "left": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#D88E18",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+          "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+          "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+          "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       },
       "right": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#C08010",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+          "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+          "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+          "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       }
     },
     {
       "top": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#E88A0E",
+        "backgroundColor": "#FF9F1C",
+        "foregroundColor": "#B86E0A",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+          "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+          "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+          "0x08000000", "0x18000000", "0x08000000", "0x00000000"
         ]
       },
       "left": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#C8700A",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+          "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+          "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+          "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       },
       "right": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#B06008",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+          "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+          "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+          "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       }
     },
     {
       "top": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#C84C09",
+        "backgroundColor": "#E87D0D",
+        "foregroundColor": "#8B4513",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+          "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+          "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+          "0x08000000", "0x18000000", "0x08000000", "0x00000000"
         ]
       },
       "left": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#A83C06",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+          "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+          "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+          "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       },
       "right": {
-        "backgroundColor": "#ffffff",
-        "foregroundColor": "#903005",
         "width": 32,
         "bitmap": [
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-          "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-          "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-          "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-          "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-          "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+          "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+          "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+          "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+          "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
         ]
       }
     }
@@ -250,241 +170,161 @@
     "foregroundColor": "#e6edf3",
     "strongColor": "#e6edf3",
     "weakColor": "#8b949e",
-    "radarColor": "#C84C09",
+    "radarColor": "#FFA726",
     "growingAnimation": true,
     "contribPatterns": [
       {
         "top": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#161b22",
+          "backgroundColor": "#161b22",
+          "foregroundColor": "#21262d",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+            "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+            "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+            "0x08000000", "0x18000000", "0x08000000", "0x00000000"
           ]
         },
         "left": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#12161c",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+            "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+            "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+            "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         },
         "right": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#10141a",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+            "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+            "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+            "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         }
       },
       {
         "top": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#F5BE6E",
+          "backgroundColor": "#FFE98A",
+          "foregroundColor": "#C4B050",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+            "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+            "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+            "0x08000000", "0x18000000", "0x08000000", "0x00000000"
           ]
         },
         "left": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#D9A050",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+            "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+            "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+            "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         },
         "right": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#C89040",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+            "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+            "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+            "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         }
       },
       {
         "top": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#F5A623",
+          "backgroundColor": "#FFC847",
+          "foregroundColor": "#B08A20",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+            "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+            "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+            "0x08000000", "0x18000000", "0x08000000", "0x00000000"
           ]
         },
         "left": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#D88E18",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+            "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+            "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+            "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         },
         "right": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#C08010",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+            "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+            "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+            "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         }
       },
       {
         "top": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#E88A0E",
+          "backgroundColor": "#FF9F1C",
+          "foregroundColor": "#CC7A00",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+            "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+            "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+            "0x08000000", "0x18000000", "0x08000000", "0x00000000"
           ]
         },
         "left": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#C8700A",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+            "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+            "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+            "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         },
         "right": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#B06008",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+            "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+            "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+            "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         }
       },
       {
         "top": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#C84C09",
+          "backgroundColor": "#E87D0D",
+          "foregroundColor": "#A85A00",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00C00000", "0x01E00000", "0x00C00000",
+            "0x00000000", "0x00000300", "0x00000780", "0x00000300",
+            "0x00000000", "0x0000C000", "0x0001E000", "0x0000C000",
+            "0x08000000", "0x18000000", "0x08000000", "0x00000000"
           ]
         },
         "left": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#A83C06",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x000E0000", "0x001F0000", "0x001F0000",
+            "0x000E0000", "0x00000000", "0x00000000", "0x00000700",
+            "0x00000F80", "0x00000F80", "0x00000700", "0x00000000",
+            "0x00000000", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         },
         "right": {
-          "backgroundColor": "#0d1117",
-          "foregroundColor": "#903005",
           "width": 32,
           "bitmap": [
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000",
-            "0x000FF000", "0x003FFC00", "0x00FFFF00", "0x01FFFF80",
-            "0x03FFFFC0", "0x07FFFFE0", "0x07FFFFE0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0", "0x0FFFFFF0",
-            "0x0FFFFFF0", "0x07FFFFE0", "0x07FFFFE0", "0x03FFFFC0",
-            "0x01FFFF80", "0x00FFFF00", "0x003FFC00", "0x000FF000",
-            "0x00000000", "0x00000000", "0x00000000", "0x00000000"
+            "0x00000000", "0x00000000", "0x00000000", "0x01C00000",
+            "0x03E00000", "0x03E00000", "0x01C00000", "0x00000000",
+            "0x00000000", "0x000000E0", "0x000001F0", "0x000001F0",
+            "0x000000E0", "0x00000000", "0x00000000", "0xAAAAAAAA"
           ]
         }
       }

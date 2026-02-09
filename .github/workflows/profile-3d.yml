@@ -20,7 +20,7 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           YEAR: "2026"
           SETTING_JSON: cheese-settings.json
-      - name: Strip pie chart and stats from SVG
+      - name: Strip pie chart, radar, and stats from SVG
         run: python strip-svg.py profile-3d-contrib/profile-cheese.svg
       - name: Commit & Push
         run: |
