@@ -20,8 +20,13 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           YEAR: "2026"
           SETTING_JSON: cheese-settings.json
-      - name: Strip pie chart, radar, and stats from SVG
-        run: python strip-svg.py profile-3d-contrib/profile-cheese.svg
+      - name: Fetch streak count
+        run: |
+          STREAK=$(curl -s "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&type=json" | python3 -c "import sys,json; data=json.load(sys.stdin); print(data.get('currentStreak', {}).get('length', 0))" 2>/dev/null || echo "0")
+          echo "STREAK_COUNT=$STREAK" >> $GITHUB_ENV
+          echo "Streak count: $STREAK"
+      - name: Process SVG (strip extras, add streak)
+        run: python strip-svg.py profile-3d-contrib/profile-cheese.svg --streak ${{ env.STREAK_COUNT }}
       - name: Commit & Push
         run: |
           git config user.name github-actions
