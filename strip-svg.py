@@ -1,8 +1,8 @@
 """
 Post-process the generated 3D contribution SVG:
-- Remove radar chart, pie language chart, stats text
+- Remove pie language chart and stats text
+- Keep 3D contribution bars and radar chart
 - Optionally inject streak count into the SVG
-Keeps: style, defs, background rect, 3D contribution bars, and streak overlay.
 """
 import sys
 import re
@@ -40,9 +40,9 @@ def strip_svg(filepath, streak_count=None):
 
     svg_tag = svg_match.group(1)
 
-    # Crop to remove radar/pie/stats area, but add space at top for streak
+    # Keep full height (850) for radar chart, add space at top for streak
     streak_space = 150 if streak_count is not None else 0
-    new_height = 630 + streak_space
+    new_height = 850 + streak_space
     svg_tag_new = re.sub(r'height="850"', f'height="{new_height}"', svg_tag)
     svg_tag_new = re.sub(
         r'viewBox="0 0 1280 850"',
@@ -60,7 +60,7 @@ def strip_svg(filepath, streak_count=None):
             new_rect = new_rect.replace('height="850"', f'height="{850 + streak_space}"')
             content = content.replace(old_rect, new_rect)
 
-    # Find and keep only the first top-level <g> (3D contribution bars)
+    # Find top-level <g> groups - keep first 2 (3D bars + radar), remove rest
     after_svg = svg_match.end()
     pos = after_svg
     g_count = 0
@@ -76,10 +76,14 @@ def strip_svg(filepath, streak_count=None):
 
         if tag_name == "g":
             g_count += 1
-            if g_count == 1:
-                cut_pos = find_closing_g(content, tag_start)
+            end_pos = find_closing_g(content, tag_start)
+            if end_pos is None:
                 break
-            pos = tag_start + 1
+            if g_count == 2:
+                # After radar chart (2nd group), cut everything else
+                cut_pos = end_pos
+                break
+            pos = end_pos
         else:
             if tag_name in ("style", "defs"):
                 close_tag = f"</{tag_name}>"
@@ -94,7 +98,7 @@ def strip_svg(filepath, streak_count=None):
                 pos = tag_start + 1
 
     if not cut_pos:
-        print(f"Could not find 3D contribution group in {filepath}")
+        print(f"Could not find expected groups in {filepath}")
         return
 
     # Build streak SVG elements
