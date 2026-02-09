@@ -1,0 +1,12 @@
+<svg width="500" height="120" viewBox="0 0 500 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text x="250" y="55" text-anchor="middle" font-family="Impact, 'Arial Black', 'Helvetica Neue', sans-serif" font-size="56" font-weight="900" letter-spacing="6" fill="#1A1032">STAY WINNING</text>
+  <g transform="translate(210, 70)">
+    <polygon points="12,0 15.5,8.5 24,9.5 17.5,15.5 19.5,24 12,19.5 4.5,24 6.5,15.5 0,9.5 8.5,8.5" fill="#CB5500"/>
+  </g>
+  <g transform="translate(238, 70)">
+    <polygon points="12,0 15.5,8.5 24,9.5 17.5,15.5 19.5,24 12,19.5 4.5,24 6.5,15.5 0,9.5 8.5,8.5" fill="#CB5500"/>
+  </g>
+  <g transform="translate(266, 70)">
+    <polygon points="12,0 15.5,8.5 24,9.5 17.5,15.5 19.5,24 12,19.5 4.5,24 6.5,15.5 0,9.5 8.5,8.5" fill="#CB5500"/>
+  </g>
+</svg>

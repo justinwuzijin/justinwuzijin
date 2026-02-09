@@ -1,9 +1,8 @@
 """
 Post-process the generated 3D contribution SVG to remove:
-- Radar chart
 - Pie language chart
 - Stats text (contributions count, stars, forks)
-Keeps only: style, defs, background rect, and the 3D contribution bars.
+Keeps: style, defs, background rect, 3D contribution bars, and radar chart.
 """
 import sys
 import re
@@ -18,11 +17,11 @@ def strip_svg(filepath):
     #   2. <defs>...</defs>
     #   3. <rect ... /> (background)
     #   4. <g>...</g>   (3D contribution bars - KEEP)
-    #   5. <g>...</g>   (radar chart - REMOVE)
+    #   5. <g>...</g>   (radar chart - KEEP)
     #   6. <g>...</g>   (pie chart - REMOVE)
     #   7. <g>...</g>   (stats text - REMOVE)
     #
-    # Strategy: find the closing tag of the 4th top-level group,
+    # Strategy: find the closing tag of the 2nd top-level group (radar),
     # then remove everything between that and the closing </svg>.
 
     # Find all top-level <g> ... </g> blocks by tracking nesting
@@ -33,9 +32,8 @@ def strip_svg(filepath):
 
     svg_tag = svg_match.group(1)
 
-    # Update viewBox and height to crop the image
-    svg_tag_new = re.sub(r'height="850"', 'height="630"', svg_tag)
-    svg_tag_new = re.sub(r'viewBox="0 0 1280 850"', 'viewBox="0 0 1280 630"', svg_tag_new)
+    # Keep full height for radar chart
+    svg_tag_new = svg_tag
     content = content.replace(svg_tag, svg_tag_new)
 
     # Find the position after the svg opening tag
@@ -60,30 +58,29 @@ def strip_svg(filepath):
         if tag_name == "g":
             g_count += 1
 
-            if g_count == 1:
-                # This is the 3D contribution group - find its closing </g>
-                # Need to handle nested <g> tags
-                depth = 0
-                search_pos = tag_start
-                while search_pos < len(content):
-                    # Find next <g or </g>
-                    next_g = re.search(r"<(/?)g[\s>]", content[search_pos:])
-                    if not next_g:
-                        break
-                    if next_g.group(1) == "":
-                        depth += 1
-                    else:
-                        depth -= 1
-                        if depth == 0:
-                            # Found the closing </g> of the first top-level group
-                            close_end = search_pos + next_g.end()
-                            # Find the actual end of </g>
-                            close_end = content.index(">", close_end - 1) + 1
+            # Find this group's closing </g> (handling nested <g> tags)
+            depth = 0
+            search_pos = tag_start
+            while search_pos < len(content):
+                next_g = re.search(r"<(/?)g[\s>]", content[search_pos:])
+                if not next_g:
+                    break
+                if next_g.group(1) == "":
+                    depth += 1
+                else:
+                    depth -= 1
+                    if depth == 0:
+                        close_end = search_pos + next_g.end()
+                        close_end = content.index(">", close_end - 1) + 1
+                        if g_count == 2:
+                            # After radar chart (2nd group), cut everything else
                             cut_pos = close_end
-                            break
-                    search_pos = search_pos + next_g.end()
+                        break
+                search_pos = search_pos + next_g.end()
+
+            if cut_pos:
                 break
-            pos = tag_start + 1
+            pos = close_end if depth == 0 else tag_start + 1
         else:
             # Skip non-g elements (style, defs, rect)
             if tag_name in ("style", "defs"):
