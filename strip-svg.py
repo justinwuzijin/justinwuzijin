@@ -2,7 +2,7 @@
 Post-process the generated 3D contribution SVG:
 - Remove pie language chart and stats text
 - Keep 3D contribution bars and radar chart
-- Optionally inject streak count into the SVG
+- Optionally inject streak count into the SVG (bottom-left)
 """
 import sys
 import re
@@ -40,25 +40,9 @@ def strip_svg(filepath, streak_count=None):
 
     svg_tag = svg_match.group(1)
 
-    # Keep full height (850) for radar chart, add space at top for streak
-    streak_space = 150 if streak_count is not None else 0
-    new_height = 850 + streak_space
-    svg_tag_new = re.sub(r'height="850"', f'height="{new_height}"', svg_tag)
-    svg_tag_new = re.sub(
-        r'viewBox="0 0 1280 850"',
-        f'viewBox="0 {-streak_space} 1280 {new_height}"',
-        svg_tag_new,
-    )
+    # Keep full 850 height for radar chart, no extra space needed
+    svg_tag_new = svg_tag
     content = content.replace(svg_tag, svg_tag_new)
-
-    # Extend the background rect to cover the streak area
-    if streak_count is not None:
-        bg_rect = re.search(r'(<rect[^>]*height="850"[^>]*/>)', content)
-        if bg_rect:
-            old_rect = bg_rect.group(1)
-            new_rect = old_rect.replace('y="0"', f'y="{-streak_space}"')
-            new_rect = new_rect.replace('height="850"', f'height="{850 + streak_space}"')
-            content = content.replace(old_rect, new_rect)
 
     # Find top-level <g> groups - keep first 2 (3D bars + radar), remove rest
     after_svg = svg_match.end()
@@ -101,22 +85,23 @@ def strip_svg(filepath, streak_count=None):
         print(f"Could not find expected groups in {filepath}")
         return
 
-    # Build streak SVG elements
+    # Build streak SVG elements — bottom-left corner
     streak_svg = ""
     if streak_count is not None:
-        cx = 640  # center of 1280 width
+        x = 120  # left side
+        y = 800  # near bottom
         # Fire icon (simple flame)
         flame = f'''
-<g transform="translate({cx - 20}, -130) scale(2.5)">
+<g transform="translate({x - 12}, {y - 95}) scale(1.8)">
   <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z" fill="#FF9F1C" opacity="0.9"/>
   <path d="M12 8c-2 2-4 4-4 6a4 4 0 008 0c0-2-2-4-4-6z" fill="#FFC847"/>
 </g>'''
         # Big streak number
         number = f'''
-<text x="{cx}" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="80" font-weight="900" fill="#E87D0D">{streak_count}</text>'''
+<text x="{x}" y="{y}" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="900" fill="#E87D0D">{streak_count}</text>'''
         # "DAY STREAK" label
         label = f'''
-<text x="{cx}" y="12" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#A1887F" letter-spacing="6">DAY STREAK</text>'''
+<text x="{x}" y="{y + 22}" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#A1887F" letter-spacing="4">DAY STREAK</text>'''
         streak_svg = flame + number + label
 
     # Assemble final SVG
