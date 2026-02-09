@@ -1,7 +1,7 @@
 {
   "type": "bitmap",
   "fileName": "profile-cheese.svg",
-  "backgroundColor": "#FFF5E1",
+  "backgroundColor": "#00000000",
   "foregroundColor": "#5D4037",
   "strongColor": "#4E342E",
   "weakColor": "#A1887F",
