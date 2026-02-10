@@ -1,12 +1,12 @@
-<svg width="500" height="120" viewBox="0 0 500 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="55" text-anchor="middle" font-family="Impact, 'Arial Black', 'Helvetica Neue', sans-serif" font-size="56" font-weight="900" letter-spacing="6" fill="#1A1032">STAY WINNING</text>
-  <g transform="translate(210, 70)">
-    <polygon points="12,0 15.5,8.5 24,9.5 17.5,15.5 19.5,24 12,19.5 4.5,24 6.5,15.5 0,9.5 8.5,8.5" fill="#CB5500"/>
+<svg width="500" height="50" viewBox="0 0 500 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Streak: fire icon + 39/365 -->
+  <g transform="translate(192, 12)">
+    <!-- Fire icon -->
+    <path d="M10 0C10 0 6.5 5.5 6.5 9.5C6.5 11.5 7.5 13 9 13.8C7.8 13.2 7 11.8 7 10.2C7 7.2 10 3 10 0Z M13 4C13 4 10.5 7.5 10.5 10C10.5 11.8 11.8 13.2 13.5 13.5C12 14.5 10 14.8 8.2 14C5.8 12.8 4.5 10 5.5 7.2C6 5.8 7 4.5 8 3.5C8 5 9 6.5 10.5 6.5C11 6.5 12 5.5 13 4Z" fill="#CB5500"/>
+    <path d="M11 8C11 8 9.5 10 9.5 11.5C9.5 12.8 10.6 14 12 14C13.4 14 14.5 12.8 14.5 11.5C14.5 10 13 8 11 6C12.5 7.5 13 9 13 10.5C13 11.5 12.2 12.5 11.2 12.5C10.2 12.5 9.5 11.5 10 10.5C10.3 9.5 11 8 11 8Z" fill="#E8890C"/>
   </g>
-  <g transform="translate(238, 70)">
-    <polygon points="12,0 15.5,8.5 24,9.5 17.5,15.5 19.5,24 12,19.5 4.5,24 6.5,15.5 0,9.5 8.5,8.5" fill="#CB5500"/>
-  </g>
-  <g transform="translate(266, 70)">
-    <polygon points="12,0 15.5,8.5 24,9.5 17.5,15.5 19.5,24 12,19.5 4.5,24 6.5,15.5 0,9.5 8.5,8.5" fill="#CB5500"/>
-  </g>
+  <text x="226" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#CB5500">39</text>
+  <text x="249" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#57606a">/</text>
+  <text x="257" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#57606a">365</text>
+  <text x="284" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#57606a">day streak</text>
 </svg>
