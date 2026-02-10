@@ -22,7 +22,18 @@ jobs:
           SETTING_JSON: cheese-settings.json
       - name: Fetch streak count
         run: |
-          STREAK=$(curl -s "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&type=json" | python3 -c "import sys,json; data=json.load(sys.stdin); print(data.get('currentStreak', {}).get('length', 0))" 2>/dev/null || echo "0")
+          # Fetch streak data
+          RESPONSE=$(curl -s "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&type=json")
+          STREAK=$(echo "$RESPONSE" | python3 -c "import sys,json; data=json.load(sys.stdin); print(data.get('currentStreak', {}).get('length', 0))" 2>/dev/null || echo "0")
+          END_DATE=$(echo "$RESPONSE" | python3 -c "import sys,json; data=json.load(sys.stdin); print(data.get('currentStreak', {}).get('end', ''))" 2>/dev/null || echo "")
+          TODAY=$(date -u +%Y-%m-%d)
+          
+          # If API end date is before today, add 1 (API might be cached/lagging)
+          if [ -n "$END_DATE" ] && [ "$END_DATE" != "$TODAY" ]; then
+            STREAK=$((STREAK + 1))
+            echo "Adjusted streak +1 (API showed $END_DATE, today is $TODAY)"
+          fi
+          
           echo "STREAK_COUNT=$STREAK" >> $GITHUB_ENV
           echo "Streak count: $STREAK"
       - name: Process SVG (strip extras, add streak)
