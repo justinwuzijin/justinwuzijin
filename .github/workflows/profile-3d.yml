@@ -21,45 +21,68 @@ jobs:
           YEAR: "2026"
           SETTING_JSON: cheese-settings.json
       - name: Fetch streak count
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Fetch streak data with retries
-          echo "Fetching streak for user: ${{ github.repository_owner }}"
-          RESPONSE=$(curl -s --retry 3 --retry-delay 2 "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&type=json")
-          echo "API Response: $RESPONSE"
+          # Get contributions and calculate streak with Python
+          echo "Fetching contributions for ${{ github.repository_owner }}..."
           
-          # Parse streak count
-          STREAK=$(echo "$RESPONSE" | python3 -c "
-          import sys, json
-          try:
-              data = json.load(sys.stdin)
-              streak = data.get('currentStreak', {}).get('length', 0)
-              print(int(streak) if streak else 0)
-          except Exception as e:
-              print(f'Error: {e}', file=sys.stderr)
-              print(0)
-          ")
+          gh api graphql -f query='
+            query($user: String!) {
+              user(login: $user) {
+                contributionsCollection {
+                  contributionCalendar {
+                    weeks {
+                      contributionDays {
+                        contributionCount
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ' -f user="${{ github.repository_owner }}" > /tmp/contrib.json
           
-          # Parse end date
-          END_DATE=$(echo "$RESPONSE" | python3 -c "
-          import sys, json
-          try:
-              data = json.load(sys.stdin)
-              print(data.get('currentStreak', {}).get('end', ''))
-          except:
-              print('')
-          ")
+          STREAK=$(python3 << 'EOF'
+          import json
+          from datetime import datetime, timedelta
           
-          TODAY=$(date -u +%Y-%m-%d)
-          echo "Parsed streak: $STREAK, end date: $END_DATE, today: $TODAY"
+          with open('/tmp/contrib.json') as f:
+              data = json.load(f)
           
-          # If API end date is before today, add 1 (API might be cached/lagging)
-          if [ -n "$END_DATE" ] && [ "$END_DATE" != "$TODAY" ]; then
-            STREAK=$((STREAK + 1))
-            echo "Adjusted streak +1 (API showed $END_DATE, today is $TODAY)"
-          fi
+          days = []
+          for week in data['data']['user']['contributionsCollection']['contributionCalendar']['weeks']:
+              for day in week['contributionDays']:
+                  days.append((day['date'], day['contributionCount']))
+          
+          days.sort(key=lambda x: x[0], reverse=True)
+          
+          # Count streak from today backwards
+          streak = 0
+          today = datetime.utcnow().date()
+          
+          for date_str, count in days:
+              date = datetime.strptime(date_str, '%Y-%m-%d').date()
+              expected = today - timedelta(days=streak)
+              
+              if date == expected and count > 0:
+                  streak += 1
+              elif date == expected and count == 0:
+                  # Today has no contributions yet, check from yesterday
+                  if streak == 0:
+                      continue
+                  else:
+                      break
+              elif date < expected:
+                  break
+          
+          print(streak)
+          EOF
+          )
           
           echo "STREAK_COUNT=$STREAK" >> $GITHUB_ENV
-          echo "Final streak count: $STREAK"
+          echo "Calculated streak: $STREAK"
       - name: Process SVG (strip extras, add streak)
         run: python strip-svg.py profile-3d-contrib/profile-cheese.svg --streak ${{ env.STREAK_COUNT }}
       - name: Commit & Push
