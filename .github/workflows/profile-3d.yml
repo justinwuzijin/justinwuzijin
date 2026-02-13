@@ -22,11 +22,35 @@ jobs:
           SETTING_JSON: cheese-settings.json
       - name: Fetch streak count
         run: |
-          # Fetch streak data
-          RESPONSE=$(curl -s "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&type=json")
-          STREAK=$(echo "$RESPONSE" | python3 -c "import sys,json; data=json.load(sys.stdin); print(data.get('currentStreak', {}).get('length', 0))" 2>/dev/null || echo "0")
-          END_DATE=$(echo "$RESPONSE" | python3 -c "import sys,json; data=json.load(sys.stdin); print(data.get('currentStreak', {}).get('end', ''))" 2>/dev/null || echo "")
+          # Fetch streak data with retries
+          echo "Fetching streak for user: ${{ github.repository_owner }}"
+          RESPONSE=$(curl -s --retry 3 --retry-delay 2 "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&type=json")
+          echo "API Response: $RESPONSE"
+          
+          # Parse streak count
+          STREAK=$(echo "$RESPONSE" | python3 -c "
+          import sys, json
+          try:
+              data = json.load(sys.stdin)
+              streak = data.get('currentStreak', {}).get('length', 0)
+              print(int(streak) if streak else 0)
+          except Exception as e:
+              print(f'Error: {e}', file=sys.stderr)
+              print(0)
+          ")
+          
+          # Parse end date
+          END_DATE=$(echo "$RESPONSE" | python3 -c "
+          import sys, json
+          try:
+              data = json.load(sys.stdin)
+              print(data.get('currentStreak', {}).get('end', ''))
+          except:
+              print('')
+          ")
+          
           TODAY=$(date -u +%Y-%m-%d)
+          echo "Parsed streak: $STREAK, end date: $END_DATE, today: $TODAY"
           
           # If API end date is before today, add 1 (API might be cached/lagging)
           if [ -n "$END_DATE" ] && [ "$END_DATE" != "$TODAY" ]; then
@@ -35,7 +59,7 @@ jobs:
           fi
           
           echo "STREAK_COUNT=$STREAK" >> $GITHUB_ENV
-          echo "Streak count: $STREAK"
+          echo "Final streak count: $STREAK"
       - name: Process SVG (strip extras, add streak)
         run: python strip-svg.py profile-3d-contrib/profile-cheese.svg --streak ${{ env.STREAK_COUNT }}
       - name: Commit & Push
