@@ -46,6 +46,6 @@ fill-opacity: 0.5;
   <path d="M12 2C8 6 4 10 4 14a8 8 0 0016 0c0-4-4-8-8-12z" fill="#FF9F1C" opacity="0.9"/>
   <path d="M12 8c-2 2-4 4-4 6a4 4 0 008 0c0-2-2-4-4-6z" fill="#FFC847"/>
 </g>
-<text x="120" y="800" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="900" fill="#E87D0D">43</text>
+<text x="120" y="800" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="900" fill="#E87D0D">0</text>
 <text x="120" y="822" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#A1887F" letter-spacing="4">DAY STREAK</text>
 </svg>
