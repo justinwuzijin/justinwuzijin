@@ -51,30 +51,29 @@ jobs:
           with open('/tmp/contrib.json') as f:
               data = json.load(f)
           
-          days = []
+          # Build a dict for easy lookup
+          contrib = {}
           for week in data['data']['user']['contributionsCollection']['contributionCalendar']['weeks']:
               for day in week['contributionDays']:
-                  days.append((day['date'], day['contributionCount']))
+                  contrib[day['date']] = day['contributionCount']
           
-          days.sort(key=lambda x: x[0], reverse=True)
-          
-          # Count streak from today backwards
-          streak = 0
           today = datetime.utcnow().date()
           
-          for date_str, count in days:
-              date = datetime.strptime(date_str, '%Y-%m-%d').date()
-              expected = today - timedelta(days=streak)
-              
-              if date == expected and count > 0:
+          # Start from today if there are contributions, otherwise yesterday
+          start_date = today
+          if contrib.get(str(today), 0) == 0:
+              start_date = today - timedelta(days=1)
+          
+          # Count consecutive days with contributions
+          streak = 0
+          check_date = start_date
+          
+          while True:
+              date_str = check_date.strftime('%Y-%m-%d')
+              if contrib.get(date_str, 0) > 0:
                   streak += 1
-              elif date == expected and count == 0:
-                  # Today has no contributions yet, check from yesterday
-                  if streak == 0:
-                      continue
-                  else:
-                      break
-              elif date < expected:
+                  check_date -= timedelta(days=1)
+              else:
                   break
           
           print(streak)
