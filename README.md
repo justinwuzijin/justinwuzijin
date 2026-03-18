@@ -1,10 +1,12 @@
-[systems design engineering](https://uwaterloo.ca/future-students/programs/systems-design-engineering) @ uWaterloo
+[systems design engineering](https://uwaterloo.ca/future-students/programs/systems-design-engineering) @ uWaterloo + love building
 
 swe @ [ONgov](https://www.ontario.ca/page/ministry-public-business-service-delivery)
 
 swe @ WAT.ai [ClipABit](https://clipabit.web.app/) subteam
 
 part-time [filmmaker](https://www.youtube.com/@byjustinwu)
+
+seeking fall 2026 design eng / swe internships!
 
 <p align="center">
   <img src="./profile-3d-contrib/profile-cheese.svg" alt="3D Cheese Contribution Graph" width="100%" />
