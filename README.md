@@ -1,12 +1,12 @@
 [systems design engineering](https://uwaterloo.ca/future-students/programs/systems-design-engineering) @ uWaterloo 
 
-- swe @ [ONgov](https://www.ontario.ca/page/ministry-public-business-service-delivery)
+- incoming @tesla(https://www.tesla.com/)
 
-- swe @ WAT.ai [ClipABit](https://clipabit.web.app/) subteam
+- prev @ [ONgov](https://www.ontario.ca/page/ministry-public-business-service-delivery)
 
 - part-time [filmmaker](https://www.youtube.com/@byjustinwu)
 
-- seeking fall 2026 design eng / swe internships!
+- seeking summer 2027 des eng / swe internships!
 
 <p align="center">
   <img src="./profile-3d-contrib/profile-cheese.svg" alt="3D Cheese Contribution Graph" width="100%" />
