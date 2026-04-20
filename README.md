@@ -1,6 +1,6 @@
 [systems design engineering](https://uwaterloo.ca/future-students/programs/systems-design-engineering) @ uWaterloo 
 
-- incoming @tesla(https://www.tesla.com/)
+- incoming @[tesla](https://www.tesla.com/)
 
 - prev @ [ONgov](https://www.ontario.ca/page/ministry-public-business-service-delivery)
 
